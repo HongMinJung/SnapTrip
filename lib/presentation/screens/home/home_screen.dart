@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:snap_trip/core/theme/app_theme.dart';
 import 'package:snap_trip/presentation/screens/home/explore_tab.dart';
 import 'package:snap_trip/presentation/screens/home/my_trips_tab.dart';
 import 'package:snap_trip/presentation/screens/home/notifications_tab.dart';
@@ -31,7 +32,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 // 여행 추가 화면으로 이동
                 Navigator.of(context).pushNamed('/create-trip');
               },
-              backgroundColor: Colors.orange, // 플로팅 버튼 배경색을 오렌지로 변경
+              backgroundColor: AppColors.primary, // 플로팅 버튼 배경색을 오렌지로 변경
               child: const Icon(
                 Icons.add,
                 color: Colors.white, // 아이콘 색상을 흰색으로 설정
@@ -45,8 +46,8 @@ class _HomeScreenState extends State<HomeScreen> {
             _currentIndex = index;
           });
         },
-        selectedItemColor: Colors.orange, // 선택된 아이템 색상을 오렌지로 변경
-        unselectedItemColor: Colors.grey, // 선택되지 않은 아이템 색상을 회색으로 변경
+        selectedItemColor: AppColors.primary, // 선택된 아이템 색상을 오렌지로 변경
+        unselectedItemColor: AppColors.textSecondary, // 선택되지 않은 아이템 색상을 회색으로 변경
         type: BottomNavigationBarType.fixed,
         elevation: 8,
         items: const [
